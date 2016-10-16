@@ -34,7 +34,7 @@ class SpeedIndexMetric extends Audit {
     return {
       category: 'Performance',
       name: 'speed-index-metric',
-      description: 'Speed Index',
+      description: 'Perceptual Speed Index',
       optimalValue: SCORING_POINT_OF_DIMINISHING_RETURNS.toLocaleString(),
       requiredArtifacts: ['traceContents']
     };
@@ -86,7 +86,6 @@ class SpeedIndexMetric extends Audit {
       score = Math.max(0, score);
 
       const extendedInfo = {
-        speedline,
         first: speedline.first,
         complete: speedline.complete,
         duration: speedline.duration,
